@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,300&family=Inter:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+:root{
+    --color-primary: #FEA72C;
+    --color-primary-ligth: #FEB44B;
+    --color-primary-extra-light: #FFECD0;
+    --color-dark: #533B5C;
+    --color-dark-ligth: #2B2935;
+    --color-success: #00A751;
+    --color-success-ligth: #DCFFEC;
+    --color-info: #00ACC6;
+    --color-info-light: #DAF7FD;
+    --color-white: #FFF;
+    --color-ligth: #cccace; 
+    --color-secundary: #8C8B8E;   
+    
+    --background-color: #F9F9FB;
+
+}
+
+*{
+   margin:0;
+   padding: 0;
+}
+
+body{
+    background: var(--background-color);
+    font-family: 'Poppins';
+}
+
+/* ASIDE BAR */
+aside{
+    position: fixed;
+    width: 120px;
+    height: 100vh;
+    background: var(--color-white);
+    display: flex;   
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+aside .top-option{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+aside .logo-menu{
+    width:100%;
+    display: flex;
+    margin-top: 23px;
+    align-items: center;
+    justify-content: center;
+}
+.logo-menu i{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: .7rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px 8px var(--color-primary-extra-light);
+    cursor: pointer;
+    transition: ease .3s;
+}
+
+.logo-menu i:hover{
+    box-shadow: 0px 0px 13px 14px var(--color-primary-extra-light);
+}
+
+.top-option .option-menu {
+    width:100%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+}
+.option-menu i{
+   border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:  10px 0;
+    color: #cccace;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.active-menu{
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    transition: 1s ease;
+}
+.active-menu:hover{
+    box-shadow: 0px 0px 13px 14px var(--color-primary-extra-light);
+}
+
+.logout{
+    width:100%;
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logout span{
+    padding: .5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: var(--color-dark-ligth);
+}
+
+.logout span:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0px 0px 10px 13px var(--color-primary-extra-light);
+}
+
+/* MAIN BAR */
+main{
+    width: calc(100% - 120px);
+    margin-left: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* PANEL LEFT */
+.container-left{
+    width: calc(100% - 380px);
+}
+
+/* PANEL RIGHT */
+.container-right{
+    width: 380px;
+    background: var(--color-white);
+    height: 100%;
+}
+
+.container-right .top-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: .9rem;
+    gap: 7px;
+}
+.alert-message{
+    position: relative;
+    text-align: center;
+}
+.alert-message span, .update-password span{
+    background: var(--background-color);
+    padding: .3rem;
+    border-radius: 50%;
+    color: var(--color-secundary);
+    position: relative;
+    cursor: pointer;
+}
+
+
+.main-user{
+   --width: calc(100% - 100px);
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+.avatar-user span{
+    background:var(--color-info-light);
+    color: var(--color-secundary);
+    padding: .4rem;
+    border-radius: 50%;
+}
+.profile-user{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.profile-user .perfil-user{
+    font-size: 10px;
+    font-weight: 400;
+}
