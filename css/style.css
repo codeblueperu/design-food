@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,300&family=Inter:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+
 :root{
     --color-primary: #FEA72C;
     --color-primary-ligth: #FEB44B;
     --color-primary-extra-light: #FFECD0;
-    --color-dark: #533B5C;
-    --color-dark-ligth: #2B2935;
+    --color-dark: #1C2835;
+    --color-dark-ligth: #333335;
     --color-success: #00A751;
     --color-success-ligth: #DCFFEC;
     --color-info: #00ACC6;
@@ -134,9 +136,11 @@ main{
 
 /* PANEL RIGHT */
 .container-right{
+    position: relative;
     width: 380px;
     background: var(--color-white);
-    height: 100%;
+    height: 100vh;
+    padding-bottom: 1.5rem;
 }
 
 .container-right .top-menu{
@@ -161,8 +165,6 @@ main{
     position: relative;
     cursor: pointer;
 }
-
-
 .main-user{
    --width: calc(100% - 100px);
     display: flex;
@@ -186,3 +188,201 @@ main{
     font-size: 10px;
     font-weight: 400;
 }
+
+/* CAR CREDICT */
+.content-card{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.content-card .card{
+    background-color:  var(--color-primary);
+    width: 90%;
+    padding: .7rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 18px 14px var(--color-primary-extra-light);
+    transform: rotate(2deg)
+}
+.content-card .card .title-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.title-card .text{
+    color: hsl(180, 50%, 92%,0.6);
+    font-size: 15px;
+}
+.title-card .sucursal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-card .sucursal i{
+    color: var(--color-white);
+    font-size: 35px;
+    margin-top: -10px;
+}
+.card .body-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    color: var(--color-primary-extra-light);
+    font-weight: 600;
+    margin-top: 7px;
+}
+.card .footer-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.footer-card .name-client{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.footer-card .name-client h3{
+    font-size: 15px;
+    margin: 0;
+    color: var(--color-white);
+}
+.footer-card .name-client b{
+    font-size: 15px;
+    color: hsl(180, 50%, 92%,0.6);
+    font-weight: 400;
+}
+.footer-card .chid-card span{
+    color: #8f5606;
+    font-size: 35px;
+}
+
+/* ORDER MENU */
+.order-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    padding: .9rem;
+}
+.order-menu .title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-menu .title h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.order-menu .title span{
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .1s ease;
+}
+.order-menu .title span i{
+    background: var(--color-primary);
+    color: var(--color-primary-extra-light);
+    font-size: 16px;
+    padding: 1px;
+    border-radius: 5px;
+    transition: .1s ease;
+}
+.order-menu .title span:hover i{
+    box-shadow: 0px 0px 10px 7px var(--color-primary-extra-light);
+    transform: translate(5px);
+}
+
+/* ITEMS SHOPPING */
+.container-show{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 25px;
+}
+
+.container-show .item{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: var(--color-white);
+    border-radius: 13px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px 0px var(--color-ligth);
+    margin-bottom: 17px;
+}
+.container-show .item .image{
+    width: 55px;
+    background: var(--color-primary-extra-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border-radius: 15px;
+    border: none;
+}
+.container-show .item .image img{
+    width: 100%;
+    padding: 5px;
+}
+.container-show .item .description-count{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-left: -100px;
+    font-weight: 300;
+    justify-content: center;
+}
+
+.container-show .item .description-count span{
+    font-size: 11px;
+    color: var(--color-primary);
+}
+.container-show .item .description-count span b{
+    font-size: 13px;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.container-show .item .price{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+ }
+
+ .container-show .item .price span{
+    font-size: 11px;
+    color: var(--color-primary);
+ }
+
+ .container-show .item .price span b{
+    font-size: 14px;
+    color: var(--color-dark);
+    font-weight: 700;
+ }
