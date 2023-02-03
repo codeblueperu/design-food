@@ -755,4 +755,11 @@ main{
         margin: 0;
     }
     
+    .container-favority{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
  }
