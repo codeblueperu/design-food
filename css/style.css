@@ -328,13 +328,20 @@ main{
 }
 
 /* CARD MENU */
-
+.container-favority{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .card-menu{
     width: 220px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 7px;
 }
 .card-menu:hover img{
     animation-iteration-count: infinite;
