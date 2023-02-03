@@ -275,9 +275,10 @@ main{
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     padding:1.5rem;
-    justify-content: center;
+    --justify-content: center;
+    --max-height: 190px;
+    --overflow: auto;
 }
 
 .card-category{
@@ -742,16 +743,16 @@ main{
         margin-top: -30px;
     }
     
-    .container-categoria{
-        position: relative;
-        width: 100%;
-        height: 150px;
-        
-        display: inline-flex !important;
-        overflow: auto;
+    .container-categoria{ 
+        display: flex;
+        flex-direction: row;
+        overflow-X: auto;
+        justify-content: space-between;
+        padding: 5px;
+        gap: 15px;
     }
-
     .container-categoria .card-category{
-        position: absolute;
+        margin: 0;
     }
+    
  }
